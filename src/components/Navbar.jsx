@@ -76,9 +76,25 @@ export default function Navbar() {
           z-index: 1000;
           padding: 10px 0;
           background: #000000;
-          border-bottom: 1px solid transparent;
-          border-image: linear-gradient(90deg, transparent 0%, #27AAE2 30%, #8dd7f5 50%, #27AAE2 70%, transparent 100%) 1;
+          border-bottom: 1px solid rgba(39,170,226,0.18);
           box-shadow: 0 1px 24px rgba(39,170,226,0.3), 0 0 50px rgba(39,170,226,0.08);
+        }
+        .navbar::after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 200px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent 0%, #27AAE2 40%, #8dd7f5 50%, #27AAE2 60%, transparent 100%);
+          animation: navShine 2.8s ease-in-out infinite;
+          box-shadow: 0 0 10px rgba(39,170,226,0.8), 0 0 20px rgba(39,170,226,0.4);
+        }
+        @keyframes navShine {
+          0%   { left: -200px; opacity: 0; }
+          10%  { opacity: 1; }
+          90%  { opacity: 1; }
+          100% { left: 100%; opacity: 0; }
         }
         .navbar__inner {
           display: flex;
