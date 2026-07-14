@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.gudeskillzlab.com)",
+      "WebFetch(domain:www.axissportslab.com)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl *)",
+      "Bash(start *)",
+      "Bash(unzip -l \"/c/Users/Administrator/Downloads/gudeskillzlab.zip\")",
+      "Bash(unzip -o \"/c/Users/Administrator/Downloads/gudeskillzlab.zip\" -d \"/c/Users/Administrator/Desktop/TechGenics/Basketball-training-new/public/images/\")",
+      "Bash(mkdir -p img)",
+      "Bash(cp \"images/gudeskillzlab/Home Pictures/Home-HeroSection-Background-1.png\" img/home-hero-bg.png)",
+      "Bash(cp \"images/gudeskillzlab/Home Pictures/Home-HeroSection-2.png\"            img/home-hero-logo.png)",
+      "Bash(cp \"images/gudeskillzlab/Home Pictures/Home Pic -3.png\"                   img/noah-ad.png)",
+      "Bash(cp \"images/gudeskillzlab/Home Pictures/Home-4.png\"                        img/home-4.png)",
+      "Bash(npx vite *)",
+      "Bash(unzip -o Gallary.zip -d gallery_extracted)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: Gude Skillz Lab basketball training website *)"
+    ]
+  }
+}
