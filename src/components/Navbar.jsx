@@ -39,8 +39,11 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <Link to="/book-session" className="btn-primary navbar__cta">
-          Book a Session
+        <Link to="/book-session" className="navbar__cta">
+          <span>Book a Session</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </Link>
 
         {/* Hamburger */}
@@ -141,11 +144,40 @@ export default function Navbar() {
         .navbar__link.active { color: #27AAE2; }
 
         .navbar__cta {
-          font-size: 13px;
-          padding: 10px 20px;
+          font-size: 12.5px;
+          padding: 10px 22px;
           white-space: nowrap;
           text-decoration: none;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          font-family: 'Inter', sans-serif;
+          background: transparent;
+          border: 1.5px solid #27AAE2;
+          color: #27AAE2;
+          border-radius: 8px;
+          position: relative;
+          overflow: hidden;
+          transition: color 0.3s, box-shadow 0.3s;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
         }
+        .navbar__cta::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: #27AAE2;
+          transform: translateX(-101%);
+          transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+          z-index: 0;
+        }
+        .navbar__cta:hover::before { transform: translateX(0); }
+        .navbar__cta:hover {
+          color: #000;
+          box-shadow: 0 0 20px rgba(39,170,226,0.5), 0 0 40px rgba(39,170,226,0.2);
+        }
+        .navbar__cta span, .navbar__cta svg { position: relative; z-index: 1; }
 
         .navbar__hamburger {
           display: none;
