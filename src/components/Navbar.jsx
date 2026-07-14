@@ -76,7 +76,7 @@ export default function Navbar() {
           z-index: 1000;
           padding: 10px 0;
           background: #000000;
-          border-bottom: 1px solid rgba(39,170,226,0.18);
+          border-bottom: 1px solid #27AAE2;
           box-shadow: 0 1px 24px rgba(39,170,226,0.3), 0 0 50px rgba(39,170,226,0.08);
         }
         .navbar::after {
